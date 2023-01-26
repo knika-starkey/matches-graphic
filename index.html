@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .card {
+        display: inline-block;
+        width: 80px;
+        height: 120px;
+        border: solid 2px orange;
+        background-color: rgb(228, 225, 69);
+
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 40px;
+        color: red;
+      } */
+
+      .math-st {
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .effect {
+        /* height: 0; */
+        opacity: 0;
+        transition: all 3s;
+        transform: translateY(100%);
+      }
+
+      .rotate {
+        transform: rotate(3600deg);
+        transition: all 3s ease;
+        opacity: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="info"></div>
+    <!-- <input type="number" name="" id="card" min="0" max="13" />
+    <button id="set_card">Set Card</button> -->
+    <button id="pullCard">Pull!</button>
+    <div id="match"></div>
+    <!-- <div id="played_cards"></div> -->
+    <script src="./script.js"></script>
+  </body>
+</html>
