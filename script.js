@@ -1,9 +1,8 @@
 let maxM = 20;
 let minM = 10;
 let amount = Math.floor(Math.random() * (maxM - minM) + minM);
-amount = 13;
 let mathesF = document.getElementById("match");
-let info = document.getElementById("info");
+let infoDiv = document.getElementById("info");
 let amountPlace = document.getElementById("amount");
 let pullButton = document.getElementById("pullCard");
 let choosen = [];
@@ -93,6 +92,10 @@ function computerMove() {
   if (checkWin("I ")) {
     b = true;
   } else {
+    let burningMatches = document.getElementsByClassName("burn");
+    for (let i = 0; i < burningMatches.length; i++) {
+      burningMatches[i].src = "./images/match-burnt.png";
+    }
     setTimeout(removeMatch.bind(null, count), 3000);
   }
   isGame = true;
@@ -100,9 +103,9 @@ function computerMove() {
 }
 
 function checkWin(who) {
-  info.innerHTML = who + " take";
-  if (amount == 0) {
-    info.innerHTML = who + " win";
+  infoDiv.innerHTML = who + " take";
+  if (amount <= 0) {
+    alert(who + " win");
     return true;
   }
   return false;
